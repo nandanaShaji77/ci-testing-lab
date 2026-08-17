@@ -22,3 +22,11 @@ jobs:
 
       - name: Run tests
         run: npx jest
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy step (simulated)
+        run: echo "Deploying application... Deployment successful!"
